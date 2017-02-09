@@ -9,6 +9,8 @@ lipwig is a server that uses an endpoint to copy data to clipboard. This provide
 Now, browse to wherever `lipwig` is hosted:
 
     192.168.1.104:4321/copy
+<img src="https://raw.githubusercontent.com/medakk/lipwig/master/readme_imgs/img1.png" alt="Sample image for copy" width=65% height=65%/>
 To view the clipboard, navigate to:
 
-    192.168.1.104:4321/paste
+    192.168.1.104:4321/clipboard
+<img src="https://raw.githubusercontent.com/medakk/lipwig/master/readme_imgs/img2.png" alt="Sample image for clipboard" width=65% height=65%/>
