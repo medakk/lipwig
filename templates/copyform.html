@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <title>Text to clipboard</title>
+    <style>
+        body {
+            background-color: #12151C;
+        }
+        
+        textarea {
+            display: block;
+            margin: 0 auto;
+            border: 0px;
+            width: 90%;
+        }
+
+        h3 {
+            color: #EDEDED;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        input[type="submit"] {
+            display: block;
+            background-color: #CCCCEF;
+            font-family: sans-serif;
+            font-size: 18pt;
+            font-weight: bold;
+            color: #222222;
+            border: 0px;
+            margin: 0 auto;
+            width: 90.5%;
+            height: 50px;
+        }
+
+        @media screen and (max-width: 1000px) and (min-width: 700px) {
+            h3 {
+                font-size: 48pt;
+                text-align: left;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            textarea { 
+                font-size: 24pt;
+            }
+            input[type="submit"] {
+                font-size: 52pt;
+                height: 150px;
+            }
+        }
+    </style>
+
+    <script>
+        function processForm() {
+            var copy_text = document.getElementById("copy-text");
+            if(copy_text.value==="") {
+                alert("Can't copy nothing.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h3>Enter some text to copy it to the clipboard</h3>
+    <form id="copy-form" action="/do_copy" method="GET" onsubmit="return processForm();">
+        <textarea id="copy-text" name="text" cols="40", rows="20"></textarea>
+        <br />
+        <input type="submit" value="GO" />
+    </form>
+</body>
+</html>
