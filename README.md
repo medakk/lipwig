@@ -5,7 +5,7 @@ lipwig is a server that uses an endpoint to copy data to clipboard. This provide
 
 ### Usage
 
-    lipwig [port number]
+    ./lipwig [port number]
 Now, browse to wherever `lipwig` is hosted:
 
     192.168.1.104:4321/copy
