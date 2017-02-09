@@ -1,7 +1,5 @@
 # lipwig
-lipwig is a server that uses an endpoint to copy data to clipboard. This provides a simple way of sharing text from a mobile device to the PC/laptop. `lipwig` also allows you to view clipboard data from the PC on other devices.
-
-`lipwig` is implemented in Python 3.
+`lipwig` lets you access your clipboard over a server. This provides a simple way of sharing text from a mobile device to the PC/laptop. `lipwig` is implemented in Python 3, and uses the `http.server` module for hosting the server.
 
 ### Usage
 
