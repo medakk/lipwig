@@ -70,8 +70,7 @@ def main():
         port = DEFAULT_PORT
     try:
         server = HTTPServer(('', port), LipwigHandler)
-        print('Started server')
-        #print('Started server on {}:{}'.format(*server.client_address))
+        print('Started server on port {}.'.format(port))
 
         server.serve_forever()
     except KeyboardInterrupt:
