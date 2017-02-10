@@ -16,6 +16,7 @@ def readfile(filepath, binary=True):
 
 HTML_COPYFORM = readfile('./templates/copyform.html')
 HTML_COPYSUCCESS = readfile('./templates/copied.html')
+PNG_FAVICON = readfile('./templates/favicon.png')
 TEMPLATE_CLIPBOARD = readfile('./templates/clipboard.html', binary=False)
 
 class LipwigHandler(BaseHTTPRequestHandler):
@@ -60,6 +61,14 @@ class LipwigHandler(BaseHTTPRequestHandler):
             clipboard = check_output(['xsel', '-b']).decode('utf-8')
             response = TEMPLATE_CLIPBOARD.replace('%primary%', primary).replace('%clipboard%', clipboard)
             self.wfile.write(bytes(response, 'utf-8'))
+        elif split_result.path=='/favicon.png':
+            # Send header
+            self.send_response(200)
+            mimetype = 'image/png'
+            self.send_header('Content-type', mimetype)
+            self.end_headers()
+
+            self.wfile.write(PNG_FAVICON)
         else:
             self.send_error(404, 'File not found!')
 
