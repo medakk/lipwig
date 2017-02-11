@@ -3,7 +3,7 @@
 
 ### Usage
 
-    ./lipwig [port number]
+    ./lipwig.py [port number]
 Now, browse to wherever `lipwig` is hosted:
 
     192.168.1.104:4321/copy
